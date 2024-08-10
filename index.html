@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="MMFakeBench: A Mixed-Source Multimodal Misinformation Detection Benchmark for LVLMs">
+  <meta name="keywords" content="Multimodal Misinformation Detection, Large Vision-Language Model">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MMFakeBench: A Mixed-Source Multimodal Misinformation Detection Benchmark for LVLMs.</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+  <style>
+    .carousel-item img {
+      width: 100%;
+      height: auto;
+      max-height: 800px; /* Adjust the max height as needed */
+      object-fit: cover;
+    }
+    .your-carousel {
+      max-width: 920px; /* Adjust the width as needed */
+      margin: auto;
+    }
+  </style>
+
+  <style>
+    .carousel-video-item video {
+      width: 100%;
+      height: auto;
+      max-height: 500px; /* Adjust the max height as needed */
+      object-fit: cover;
+    }
+    .your-carousel-video {
+      max-width: 800px; /* Adjust the width as needed */
+      margin: auto;
+    }
+  </style>
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">MMFakeBench: A Mixed-Source Multimodal Misinformation Detection Benchmark for LVLMs</h1>
+<!--          <h1 class="is-size-3"> ACM MM 2024 </h1>-->
+              <div class="is-size-5 publication-authors">
+              <span class="author-block">
+              <a>Anonymous</a></span>
+<!--          <div class="is-size-5 publication-authors">-->
+<!--            <span class="author-block">-->
+<!--              <a>Xuannan Liu</a><sup>1</sup>,</span>-->
+<!--            <span class="author-block">-->
+<!--              <a>Peipei Li</a><sup>1*</sup>,</span>-->
+<!--            <span class="author-block">-->
+<!--              <a>Huaibo Huang</a><sup>2</sup>,-->
+<!--            </span>-->
+<!--            <span class="author-block">-->
+<!--              <a> Zekun Li</a><sup>3</sup>,-->
+<!--            </span>-->
+<!--          </div>-->
+<!--          <div class="is-size-5 publication-authors">-->
+<!--            <span class="author-block">-->
+<!--              <a>Xing Cui</a><sup>1</sup>,-->
+<!--            </span>-->
+<!--            <span class="author-block">-->
+<!--              <a>Jiahao Liang</a><sup>1</sup>,-->
+<!--            </span>-->
+<!--            <span class="author-block">-->
+<!--              <a> Lixiong Qin</a><sup>1</sup>,-->
+<!--            </span>-->
+<!--            <span class="author-block">-->
+<!--              <a> Weihong Deng</a><sup>1</sup>,-->
+<!--            </span>-->
+<!--            <span class="author-block">-->
+<!--              <a> Zhaofeng He</a><sup>1</sup>,-->
+<!--            </span>-->
+<!--          </div>-->
+<!--          <div class="is-size-5 publication-authors">-->
+<!--            <span class="author-block"><sup>1</sup>Beijing University of Posts and Telecommunications&ensp;</span>-->
+<!--            <span class="author-block"><sup>2</sup>MAIS & NLPR, Institute of Automation, Chinese Academy of Sciences</span>-->
+<!--            <span class="author-block"><sup>3</sup>University of California, Santa Barbara</span>-->
+<!--          </div>-->
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://anonymous.4open.science/r/MMFakeBench-2618/eval/README.md"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+
+              <!-- data Link. -->
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://anonymous.4open.science/r/MMFakeBench-2618/README.md"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+              </span>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Teaser-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/illustration.png" alt="Teaser Image" height="100%">
+      <h2 class="subtitle has-text-centered">
+        <strong>Top</strong>: Previous methods often assume a single misinformation source and conduct single-source detection.
+        <strong>Bottom</strong>: We collaborate generative models and AI tools to build a mixed-source multimodal misinformation benchmark and achieve mixed-source detection.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<!-- Abstract. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+
+          <p>
+          Current multimodal misinformation detection (MMD) methods often assume a single source and type of forgery for each sample, which is insufficient for real-world scenarios where multiple forgery sources coexist. The lack of a benchmark for mixed-source misinformation has hindered progress in this field.
+          </p>
+          <p>
+          To address this, we introduce MMFakeBench, the first comprehensive benchmark for mixed-source MMD. MMFakeBench includes 3 critical sources: textual veracity distortion, visual veracity distortion, and cross-modal consistency distortion, along with 12 sub-categories of misinformation forgery types.
+          </p>
+          <p>
+          We further conduct an extensive evaluation of 6 prevalent detection methods and 15 large vision-language models (LVLMs) on MMFakeBench under a zero-shot setting.
+          The results indicate that current methods struggle under this challenging and realistic mixed-source MMD setting.
+          </p>
+          <p>
+          Additionally, we propose an innovative unified framework, which integrates rationales, actions, and tool-use capabilities of LVLM agents, significantly enhancing accuracy and generalization.
+          </p>
+          <p>
+          We believe this study will catalyze future research into more realistic mixed-source multimodal misinformation and provide a fair evaluation of misinformation detection methods.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+<!--/ Abstract. -->
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Method. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method</h2>
+
+        <div class="hero-body">
+          <img src="./static/images/pipeline.png" alt="Teaser Image" height="100%">
+<!--          <h2 class="subtitle has-text-centered">-->
+<!--            (a) Stylized image generation with a single reference image.-->
+<!--            Our InstaStyle excels at capturing style details including colors, textures, and brush strokes.-->
+<!--          </h2>-->
+        </div>
+
+        <div class="content has-text-justified">
+          <p>
+            We present a simple yet effective framework called MMD-Agent, which integrates the rationales, actions, and tool-use capabilities of LVLM agents. MMD-Agent involves two main processes: (1) Hierarchical decomposition and (2) Integration of multi-perspective rationales.
+          </p>
+          <p>
+            We first instruct LVLMs to decompose the task of mixed-source multimodal misinformation detection into three smaller subtasks: textual veracity check, visual veracity check, and cross-modal consistency reasoning.
+            During the intermediary phase, each subtask is addressed by generating multi-perspective rationales and integrating them with model actions to facilitate decision-making.
+          </p>
+          <p>
+            The rationales aim to provide valuable insights by reasoning within the current context, addressing the requirement of detecting diverse clues in misinformation. These rationales can encompass multiple perspectives, such as textual key entity (Rationale 1), injecting retrieval knowledge (Rationale 2),
+            factual analysis (Rationale 3), and commonsense analysis ( Rationale 5 and Rationale 7). The model is guided to generate reasoning paths and make decisions for each subtask individually, leveraging its inherent understanding and capabilities.
+          </p>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Method. -->
+
+    
+    <!-- Experiment. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Experiments</h2>
+      </div>
+    </div>
+    <!--/ Experiment. -->
+  </div>
+</section>
+
+<!-- Experiment1. -->
+<div class="container is-max-desktop">
+<div class="hero-body">
+  <img src="./static/images/performance.png" alt="Teaser Image" height="100%">
+  <h2 class="subtitle has-text-centered">
+    Overall results (%) of different models on the MMFakeBench validation and test set with the comparison of standard prompt (SP) and proposed MMD-Agent framework.
+  </h2>
+</div>
+</div>
+
+
+<!--&lt;!&ndash; Reference. &ndash;&gt;-->
+<!--<section class="section" id="BibTeX">-->
+<!--  <div class="container is-max-desktop content">-->
+<!--    <h2 class="title">BibTeX</h2>-->
+<!--    <pre><code>@inproceedings{liu2024fka,-->
+<!--  title={FKA-Owl: Advancing Multimodal Fake News Detection through Knowledge-Augmented LVLMs},-->
+<!--  author={Liu, Xuannan and Li, Peipei and Huang, Huaibo and Li, Zekun and Cui, Xing and Liang, Jiahao and Qin, Lixiong and Deng, Weihong and He, Zhaofeng},-->
+<!--  booktitle={ACM MM},-->
+<!--  year={2024}-->
+<!--}</code></pre>-->
+<!--  </div>-->
+<!--</section>-->
+<!--&lt;!&ndash;/ Reference. &ndash;&gt;-->
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://arxiv.org/abs/2403.01988">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/liuxuannan/FAK-Owl" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.your-carousel').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: true,
+      dots: true,
+      arrows: true,
+      autoplay: true,
+      autoplaySpeed: 4000,
+    });
+  });
+</script>
+
+<script>
+  $(document).ready(function(){
+    $('.your-carousel-video').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: true,
+      dots: true,
+      arrows: true,
+      autoplay: false, // Turn off slick's autoplay, we will handle it manually
+    });
+
+    // Function to play the current video
+    function playCurrentVideo() {
+      var currentVideo = $('.your-carousel-video .slick-current').find('video').get(0);
+      if (currentVideo) {
+        currentVideo.play();
+        currentVideo.onended = function() {
+          $('.your-carousel-video').slick('slickNext');
+        };
+      }
+    }
+        // Play the first video explicitly
+    setTimeout(function() {
+      playCurrentVideo();
+    }, 500); // Slight delay to ensure everything is loaded
+    //
+    // // Initialize the first video
+    // // playCurrentVideo();
+    // // $('.your-carousel-video').on('init', function(event, slick){
+    // //   playCurrentVideo();
+    // // });
+    //
+    // // When the slide changes, play the new video
+    // $('.your-carousel-video').on('afterChange', function(event, slick, currentSlide){
+    //   playCurrentVideo();
+    //       // Trigger slick initialization
+    // $('.your-carousel-video').slick('setPosition');
+    // });
+    // When the carousel is initialized, play the first video
+    $('.your-carousel').on('init', function(event, slick){
+      playCurrentVideo();
+    });
+
+    // When the slide changes, play the new video
+    $('.your-carousel').on('afterChange', function(event, slick, currentSlide){
+      playCurrentVideo();
+    });
+
+    // Trigger slick initialization
+    $('.your-carousel').slick('setPosition');
+
+    // Play the first video explicitly
+    // playCurrentVideo();
+
+
+  });
+</script>
+
+</body>
+</html>
