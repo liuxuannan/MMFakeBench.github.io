@@ -1,14 +1,14 @@
-# Nerfies
+# MMFakeBench Home Page
 
-This is the repository that contains source code for the [Nerfies website](https://nerfies.github.io).
+This is the repository that contains source code for the [MMFakeBench website](https://liuxuannan.github.io/MMFakeBench.github.io/).
 
-If you find Nerfies useful for your work please cite:
+If you find MMFakeBench useful for your work please cite:
 ```
-@article{park2021nerfies
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+@article{liu2024mmfakebench,
+  title={MMFakeBench: A Mixed-Source Multimodal Misinformation Detection Benchmark for LVLMs},
+  author={Liu, Xuannan and Li, Zekun and Li, Peipei and Xia, Shuhan and Cui, Xing and Huang, Linzhi and Huang, Huaibo and Deng, Weihong and He, Zhaofeng},
+  journal={arXiv preprint arXiv:2406.08772},
+  year={2024}
 }
 ```
 
